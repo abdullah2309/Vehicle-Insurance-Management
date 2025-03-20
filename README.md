@@ -45,4 +45,4 @@ Technologies Used: </h2>
 
 </p>
 
-<img src="https://github.com/abdullah2309/Vehicle-Insurance-Management/blob/Abdullah/main/Vehicle%20Insurance%20Management/wwwroot/carcore.png" >
+<img src="https://github.com/abdullah2309/Vehicle-Insurance-Management/blob/Abdullah/main/Vehicle%20Insurance%20Management/wwwroot/c2.png" >
