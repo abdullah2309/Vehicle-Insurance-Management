@@ -44,3 +44,14 @@ Technologies Used: </h2>
 
 
 </p>
+<br>
+<img src="https://github.com/abdullah2309/Vehicle-Insurance-Management/blob/Abdullah/main/Vehicle%20Insurance%20Management/wwwroot/c2.png" >
+
+<h2>User Panel </h2>
+<br>
+<img src="https://github.com/abdullah2309/Vehicle-Insurance-Management/blob/Abdullah/main/Vehicle%20Insurance%20Management/wwwroot/user.png" >
+<br>
+<h2>Admin Panel </h2>
+<br>
+<img src="https://github.com/abdullah2309/Vehicle-Insurance-Management/blob/Abdullah/main/Vehicle%20Insurance%20Management/wwwroot/admin.png" >
+
