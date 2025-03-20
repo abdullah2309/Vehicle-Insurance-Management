@@ -1,0 +1,62 @@
+﻿@model Vehicle_Insurance_Management.Models.insurance_process
+
+@{
+    Layout = "_user_panel";
+}
+
+<div class="flex-1 p-8">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-extrabold mb-6 text-center">Insurance Details</h1>
+
+        @if (Model != null)
+        {
+            <div class="overflow-x-auto">
+                <table class="min-w-full border border-gray-300 shadow-md rounded-lg">
+                    <thead class="bg-blue-700 text-white">
+                        <tr>
+                            <th class="py-2 px-4 border-b">Field</th>
+                            <th class="py-2 px-4 border-b">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-gray-100">
+                        <tr>
+                            <td class="py-2 px-4 border-b font-semibold">Policy Number</td>
+                            <td class="py-2 px-4 border-b">@Model.PolicyNumber</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-semibold">Policy Date</td>
+                            <td class="py-2 px-4 border-b">@Model.PolicyDate.ToShortDateString()</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-semibold">Policy Duration</td>
+                            <td class="py-2 px-4 border-b">@Model.PolicyDuration months</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-semibold">Customer Name</td>
+                            <td class="py-2 px-4 border-b">@Model.Customer?.Name</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-semibold">Customer CNIC</td>
+                            <td class="py-2 px-4 border-b">@Model.Customer?.CNIC</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-semibold">Vehicle Name</td>
+                            <td class="py-2 px-4 border-b">@Model.Vehicle?.VehicleName</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-semibold">Vehicle Model</td>
+                            <td class="py-2 px-4 border-b">@Model.Vehicle?.Model</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-semibold">Vehicle Number</td>
+                            <td class="py-2 px-4 border-b">@Model.Vehicle?.VehicleNumber</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        }
+        <br />
+        <br />
+
+    </div>
+</div>

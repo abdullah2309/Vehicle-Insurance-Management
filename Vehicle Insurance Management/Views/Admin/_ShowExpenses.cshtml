@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Vehicle_Insurance_Management.Models.CompanyExpenses>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-responsive-sm">
+        <thead>
+            <tr>
+                <th>Date of Expense</th>
+                <th>Type of Expense</th>
+                <th>Amount</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var expense in Model)
+                {
+                    <tr>
+                        <td>@expense.DateOfExpense.ToString("yyyy-MM-dd")</td>
+                        <td>@expense.TypeOfExpense</td>
+                        <td>@expense.AmountOfExpense</td>
+                        <td>
+                            <form asp-action="DeleteExpense" asp-route-id="@expense.ExpenseId">
+                                <input type="hidden" name="id" value="@expense.ExpenseId" />
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+
+                        
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="3" class="text-center">No expenses found.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

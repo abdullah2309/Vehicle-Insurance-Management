@@ -1,0 +1,49 @@
+﻿@model IEnumerable<EcommerceShop.Models.adminlogin>
+
+@{
+    Layout = "_Admin_Layout";
+    ViewData["Title"] = "Delete";
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+
+        <div class="card-body">
+            <div class="table-responsive">
+
+
+                <table class="table table-bordered table-responsive-sm">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.password)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.password)
+            </td>
+            <td>
+
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
+
+                        </td>
+        </tr>
+}
+    </tbody>
+</table>
+            </div>
+        </div>
+    </div>
+</div>

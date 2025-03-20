@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Vehicle_Insurance_Management.Models.ClaimDetails>
+
+@{
+    Layout = "_Admin_Layout";
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Claim Details</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-responsive-sm">
+                            <thead>
+                                <tr>
+                                    <th>@Html.DisplayNameFor(model => model.ClaimNumber)</th>
+                                    <th>@Html.DisplayNameFor(model => model.PolicyNumber)</th>
+                                    <th>Policy Start Date</th>
+                                    <th>Policy End Date</th>
+                                    <th>@Html.DisplayNameFor(model => model.CustomerName)</th>
+                                    <th>@Html.DisplayNameFor(model => model.PlaceOfAccident)</th>
+                                    <th>@Html.DisplayNameFor(model => model.DateOfAccident)</th>
+                                    <th>@Html.DisplayNameFor(model => model.InsuredAmount)</th>
+                                    <th>@Html.DisplayNameFor(model => model.ClaimableAmount)</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null && Model.Any())
+                                {
+                                    @foreach (var claim in Model)
+                                    {
+                                        <tr>
+                                            <td>@claim.ClaimNumber</td>
+                                            <td>@claim.PolicyNumber</td>
+                                            <td>@claim.PolicyStartDate</td>
+                                            <td>@claim.PolicyEndDate</td>
+                                            <td>@claim.CustomerName</td>
+                                            <td>@claim.PlaceOfAccident</td>
+                                            <td>@claim.DateOfAccident.ToString("yyyy-MM-dd")</td>
+                                            <td>@claim.InsuredAmount</td>
+                                            <td>@claim.ClaimableAmount</td>
+                                            <td>
+                                                <form asp-action="DeleteClaim" method="post" onsubmit="return confirm('Are you sure you want to delete this claim?');">
+                                                    <input type="hidden" name="id" value="@claim.ClaimNumber" />
+                                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="10" class="text-center">No claims found.</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

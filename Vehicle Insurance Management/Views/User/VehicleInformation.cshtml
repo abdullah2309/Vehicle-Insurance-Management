@@ -1,0 +1,78 @@
+﻿@model Vehicle_Insurance_Management.Models.Vehicle_Information
+@{
+    Layout = "_user_panel";
+}
+
+<!-- Main Content -->
+<div class="flex-1 p-8">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-6">Vehicle Information</h1>
+        <form method="post" asp-action="VehicleInformation">
+
+            <!-- Vehicle Information -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Vehicle Details</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                    <div>
+                        <label class="block text-gray-700">Vehicle Name</label>
+                        <input class="w-full p-2 border rounded" asp-for="VehicleName" type="text"  />
+                        <span asp-validation-for="VehicleName" class="text-red-500"></span>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700">Owner Name</label>
+                        <input class="w-full p-2 border rounded" asp-for="OwnerName" type="text"  />
+                        <span asp-validation-for="OwnerName" class="text-red-500"></span>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700">Vehicle Model</label>
+                        <input class="w-full p-2 border rounded" asp-for="Model" type="text"  />
+                        <span asp-validation-for="Model" class="text-red-500"></span>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700">Vehicle Version</label>
+                        <input class="w-full p-2 border rounded" asp-for="Version" type="text"  />
+                        <span asp-validation-for="Version" class="text-red-500"></span>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700">Vehicle Rate</label>
+                        <input class="w-full p-2 border rounded" asp-for="Rate" type="number"  />
+                        <span asp-validation-for="Rate" class="text-red-500"></span>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700">Body Number</label>
+                        <input class="w-full p-2 border rounded" asp-for="BodyNumber" type="text"  />
+                        <span asp-validation-for="BodyNumber" class="text-red-500"></span>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700">Engine Number</label>
+                        <input class="w-full p-2 border rounded" asp-for="EngineNumber" type="text"  />
+                        <span asp-validation-for="EngineNumber" class="text-red-500"></span>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700">Vehicle Number</label>
+                        <input class="w-full p-2 border rounded" asp-for="VehicleNumber" type="number"  />
+                        <span asp-validation-for="VehicleNumber" class="text-red-500"></span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex mb-6">
+                <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300 flex items-center space-x-2 cursor-pointer">
+                    <i class="fas fa-upload"></i>
+                    <span>Submit Vehicle Info</span>
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>

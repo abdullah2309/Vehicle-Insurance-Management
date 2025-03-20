@@ -1,0 +1,49 @@
+﻿@model Vehicle_Insurance_Management.Models.insurancepolicy
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "_Admin_Layout";
+
+}
+<div class="content-body">
+    <div class="container-fluid">
+
+        <h1>Edit</h1>
+
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="EditInsuracePolicy" method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group">
+                        <label asp-for="PolicyName" class="control-label"></label>
+                        <input asp-for="PolicyName" class="form-control" />
+                        <span asp-validation-for="PolicyName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PolicyType" class="control-label"></label>
+                        <select asp-for="PolicyType" class="form-control" asp-items="ViewBag.editPolicyType"></select>
+                        <span asp-validation-for="PolicyType" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PolicyDescription" class="control-label"></label>
+                        <input asp-for="PolicyDescription" class="form-control" />
+                        <span asp-validation-for="PolicyDescription" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PolicyImages" class="control-label"></label>
+                        <input asp-for="PolicyImages" type="file" class="form-control" />
+                        <span asp-validation-for="PolicyImages" class="text-danger"></span>
+                    </div>
+                 
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+

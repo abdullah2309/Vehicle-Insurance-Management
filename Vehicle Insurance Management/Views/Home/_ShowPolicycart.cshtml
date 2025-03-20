@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Vehicle_Insurance_Management.Models.insurancepolicy>
+<!-- Services Section -->
+<section class="services-section">
+    <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title centered">
+            <h2>We ensure best insurance Policy</h2>
+           
+        </div>
+        <!-- End Sec Title -->
+        <div class="inner-container">
+            <div class="section-icons-outer parallax-scene-2">
+                <div data-depth="0.20" class="icon-layer" style="background-image: url(~/images/icons/icon-1.png)"></div>
+                <div data-depth="0.20" class="pattern-layer"
+                     style="background-image: url(~/images/background/pattern-3.png)"></div>
+                <div data-depth="0.20" class="pattern-layer-two style-two"
+                     style="background-image: url(~/images/background/pattern-4.png)"></div>
+            </div>
+            <div class="row clearfix">
+                <!-- Service Block -->
+                   @if (Model != null)
+                {
+                    @foreach (var item in Model)
+                    {
+
+
+                        <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-box">
+                                <div class="image">
+                                    <a asp-controller="Home" asp-action="Policy"><img src="~/policyimages/@item.PolicyImages" asp-append-version="true" alt="" /></a>
+                                </div>
+                                <div class="lower-content">
+                                    <h4><a asp-controller="Home" asp-action="Policy">@Html.DisplayFor(modelItem => item.PolicyName)</a></h4>
+                                    <h6><a asp-controller="Home" asp-action="Policy">@Html.DisplayFor(modelItem => item.Addpolicytype.policy_name)</a></h6>
+                                    <div class="text">
+                                        @Html.DisplayFor(modelItem => item.PolicyDescription)
+                                    </div>
+                                    <a asp-controller="Home" asp-action="Policy" class="read-more">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                }
+
+
+
+            
+             
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Services Section -->

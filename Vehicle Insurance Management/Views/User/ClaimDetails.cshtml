@@ -1,0 +1,124 @@
+﻿@model Vehicle_Insurance_Management.Models.ClaimDetails
+
+@{
+    Layout = "_user_panel";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-primary text-white text-center">
+                    <h4><i class="bi bi-file-earmark-text"></i> Insurance Claim</h4>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted">
+                        An insurance claim is a request made by a policyholder to an insurance company for compensation or reimbursement for covered damages.
+                    </p>
+
+                    <h5 class="text-primary"><i class="bi bi-pencil-square"></i> How to File an Insurance Claim?</h5>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item"><b>1. Report the Incident:</b> Inform the insurance company immediately.</li>
+                        <li class="list-group-item"><b>2. Submit Documents:</b> Fill out the claim form and submit necessary proofs.</li>
+                        <li class="list-group-item"><b>3. Claim Investigation:</b> Insurer reviews and verifies details.</li>
+                        <li class="list-group-item"><b>4. Claim Approval:</b> The company processes or denies the claim.</li>
+                        <li class="list-group-item"><b>5. Compensation:</b> Payment or repairs are made.</li>
+                    </ul>
+
+                    <h5 class="text-danger"><i class="bi bi-exclamation-triangle-fill"></i> Common Reasons for Claim Denial</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">❌ Providing false or incomplete information.</li>
+                        <li class="list-group-item">❌ Policy exclusions (damage not covered under the policy).</li>
+                        <li class="list-group-item">❌ Expired policy or unpaid premiums.</li>
+                        <li class="list-group-item">❌ Delay in claim submission.</li>
+                    </ul>
+
+                    <!-- Add Claim Button -->
+                    <div class="text-center mt-4">
+                        <button type="button" class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#addClaimModal">
+                            <i class="bi bi-plus-circle"></i> Add Claim
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Claim Details Modal -->
+    <div class="modal fade" id="addClaimModal" tabindex="-1" aria-labelledby="addClaimModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="addClaimModalLabel"><i class="bi bi-file-earmark-plus"></i> Add Claim Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="claimForm" asp-action="ClaimDetails" asp-controller="User" method="post">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Policy Type List</label>
+                            <select asp-for="PolicyNumber" class="form-control" asp-items="ViewBag.PolicyName"></select>
+                        </div>
+
+                       
+                        <div class="mb-3">
+                            <label class="form-label">Policy Start Date</label>
+                            <input asp-for="PolicyStartDate" type="date" class="form-control" required>
+                            <span asp-validation-for="PolicyStartDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Policy End Date</label>
+                            <input asp-for="PolicyEndDate" type="date" class="form-control" required>
+                            <span asp-validation-for="PolicyEndDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Customer Name</label>
+                            <input asp-for="CustomerName" class="form-control" required>
+                            <span asp-validation-for="CustomerName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Place of Accident</label>
+                            <input asp-for="PlaceOfAccident" class="form-control" required>
+                            <span asp-validation-for="PlaceOfAccident" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Date of Accident</label>
+                            <input asp-for="DateOfAccident" type="date" class="form-control" required>
+                            <span asp-validation-for="DateOfAccident" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Insured Amount</label>
+                            <input asp-for="InsuredAmount" type="number" class="form-control" required>
+                            <span asp-validation-for="InsuredAmount" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Claimable Amount</label>
+                            <input asp-for="ClaimableAmount" type="number" class="form-control" required>
+                            <span asp-validation-for="ClaimableAmount" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to Reset Form when Modal is Closed -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let modal = document.getElementById("addClaimModal");
+            modal.addEventListener("hidden.bs.modal", function () {
+                document.getElementById("claimForm").reset();
+            });
+        });
+    </script>
+</div>

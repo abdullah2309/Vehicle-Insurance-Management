@@ -1,0 +1,80 @@
+﻿@model Vehicle_Insurance_Management.Models.insurancepolicy;
+@{
+    Layout = "_Admin_Layout";
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <div class="row page-titles mx-0">
+            <div class="col-sm-6 p-md-0">
+                <div class="welcome-text">
+                    <h4>Boost Your Policy – Add Insurance Policy in Just a Click!</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button to Trigger Modal -->
+        <div class="container mt-5">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">
+                Add Insurance Policy
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel">Add Policy Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <form method="post" enctype="multipart/form-data" asp-controller="Admin" asp-action="AddInsuracePolicy">
+
+                            <div class="mb-3">
+                                <label for="productName" class="form-label">Policy Number</label>
+                                <input type="text" class="form-control" asp-for="PolicyName" id="" placeholder="Enter Policy Number (e.g., Greeting Card)" required>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="productDetails" class="form-label">Policy Type List</label>
+                                <select asp-for="PolicyType" class="form-control" asp-items="ViewBag.PolicyType"></select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="productDetails" class="form-label">Policy Details</label>
+                                <textarea class="form-control" asp-for="PolicyDescription" id="" rows="4" placeholder="Enter Policy Details (e.g., Handmade greeting card with floral design)" required></textarea>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="productDetails" class="form-label">Product Images</label>
+                                <input type="file" class="form-control" asp-for="PolicyImages" placeholder="Enter Policy Image" step="0.01" required>
+
+
+                            </div>
+
+                         
+
+                            <!-- Modal Footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Add Insurance Policy</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+
+
+        @Html.Partial("_ShowInsuracePolicy", ViewData["ShowInsuracePolicy"]);
+    </div>
+</div>

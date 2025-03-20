@@ -1,0 +1,48 @@
+﻿@model Vehicle_Insurance_Management.Models.BillingInformation
+
+@{
+    Layout = "_user_panel";
+}
+
+<div class="flex-1 p-8">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-extrabold mb-6 text-center">Billing Details</h1>
+
+        @if (Model != null)
+        {
+            <div class="overflow-x-auto">
+                <table class="min-w-full border border-gray-300 shadow-md rounded-lg">
+                    <thead class="bg-blue-700 text-white">
+                        <tr>
+                            <th class="py-2 px-4 border-b">Field</th>
+                            <th class="py-2 px-4 border-b">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-gray-100">
+                        <tr>
+                            <td class="py-2 px-4 border-b font-semibold">Billing Date</td>
+                            <td class="py-2 px-4 border-b">@Model.Date.ToShortDateString()</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-semibold">Amount</td>
+                            <td class="py-2 px-4 border-b">@Model.Amount</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-semibold">Customer Name</td>
+                            <td class="py-2 px-4 border-b">@Model.Customer?.Name</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-semibold">Vehicle Model</td>
+                            <td class="py-2 px-4 border-b">@Model.Vehicle?.Model</td>
+                        </tr>
+                        <!-- Add other fields as necessary -->
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <p>No billing information found.</p>
+        }
+    </div>
+</div>

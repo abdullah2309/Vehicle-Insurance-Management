@@ -1,0 +1,62 @@
+﻿@model Vehicle_Insurance_Management.Models.Feedback
+
+@{
+    Layout = "_user_panel";
+}
+
+@if (TempData["Feedback"] != null)
+{
+    <script>
+        alert("@TempData["Feedback"]");
+    </script>
+}
+
+<div class="flex-1 p-8">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-extrabold mb-6 text-center">Submit Your Feedback</h1>
+
+        <form method="post" asp-action="Feedback">
+            <input type="hidden" asp-for="UserId" />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-gray-700 font-semibold">Name (Optional)</label>
+                    <input class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" asp-for="Name" type="text" />
+                    <span asp-validation-for="Name" class="text-red-500 text-sm"></span>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Email</label>
+                    <input class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" asp-for="Email" type="email" required />
+                    <span asp-validation-for="Email" class="text-red-500 text-sm"></span>
+                </div>
+
+                <div class="md:col-span-2">
+                    <label class="block text-gray-700 font-semibold">Your Feedback</label>
+                    <textarea class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" asp-for="Message" rows="4" required></textarea>
+                    <span asp-validation-for="Message" class="text-red-500 text-sm"></span>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Rating</label>
+                    <select class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" asp-for="Rating" required>
+                        <option value="">Select Rating</option>
+                        <option value="1">⭐ - Poor</option>
+                        <option value="2">⭐⭐ - Fair</option>
+                        <option value="3">⭐⭐⭐ - Good</option>
+                        <option value="4">⭐⭐⭐⭐ - Very Good</option>
+                        <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                    </select>
+                    <span asp-validation-for="Rating" class="text-red-500 text-sm"></span>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="mt-6 flex justify-center">
+                <button type="submit" class="flex items-center bg-blue-700 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-200">
+                    <i class="fas fa-paper-plane mr-2"></i> Submit Feedback
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,515 @@
+/* Carsore Car Insurance HTML Template */
+
+@media only screen and (max-width: 1340px) {
+}
+
+@media screen and (max-width: 1200px) {
+  .collapse:not(.show) {
+    display: unset;
+  }
+
+  .main-header .sticky-header .mobile-nav-toggler,
+  .main-header .nav-outer .mobile-nav-toggler {
+    display: block;
+  }
+
+  .header-upper .main-menu,
+  .sticky-header .main-menu {
+    display: none;
+  }
+
+  .main-header .header-upper .nav-outer,
+  .main-header .sticky-header .pull-right {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    grid-column-gap: 15px;
+    justify-content: flex-start !important;
+  }
+
+  .main-header .phone-box .box-inner .phone {
+    line-height: unset;
+  }
+
+  .about-section {
+    margin-top: -120px;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .page-wrapper {
+    overflow: hidden;
+  }
+
+  .about-section .content-column .inner-column {
+    padding-top: var(--padding-zero);
+  }
+
+  h2 {
+    font-size: var(--font-44);
+  }
+
+  h3 {
+    font-size: var(--font-26);
+  }
+
+  .services-detail-section .content-column .bold-text,
+  .team-detail-section .content-column .bold-text,
+  .about-section .content-column .bold-text {
+    font-size: var(--font-20);
+  }
+
+  .team-info-section .upper-box .text {
+    max-width: 460px;
+  }
+
+  .error-section .image-column .image img {
+    max-width: 100%;
+  }
+
+  .error-section .content-column .inner-column {
+    padding-top: var(--padding-zero);
+  }
+
+  .error-section {
+    padding: 100px 0px 100px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main-menu .navigation > li > ul,
+  .main-menu .navigation > li > ul > li > ul {
+    display: block !important;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .main-header .main-box .logo-box {
+    position: relative;
+    text-align: left;
+  }
+
+  .main-header {
+    position: relative;
+  }
+
+  .main-header .nav-outer {
+    width: 100%;
+  }
+
+  .sticky-header .logo {
+    width: 100%;
+    text-align: center;
+    padding-bottom: var(--padding-zero) !important;
+  }
+
+  .main-header .header-upper .logo-box {
+    padding-bottom: var(--padding-zero);
+  }
+
+  .main-slider .slide {
+    padding-top: var(--padding-top-100);
+  }
+
+  .main-slider .pattern-layer-six {
+    display: none;
+  }
+
+  .main-slider .content-column {
+    margin-bottom: var(--margin-bottom-40);
+  }
+
+  .about-section {
+    padding-top: var(--padding-top-20);
+  }
+
+  .about-section .content-column {
+    order: 1;
+  }
+
+  .about-section .image-column {
+    order: 2;
+  }
+
+  .cta-section .title-column h3 {
+    text-align: center;
+    margin-top: var(--margin-zero);
+  }
+
+  .main-header .sticky-header .pull-right {
+    width: 100%;
+  }
+
+  .testimonial-section .carousel-column {
+    order: 1;
+  }
+
+  .testimonial-section .image-column {
+    order: 2;
+  }
+
+  .insurance-block:nth-child(2) .inner-box::before,
+  .insurance-block .inner-box::after {
+    display: none;
+  }
+
+  .team-info-section .upper-box .text {
+    max-width: 100%;
+    margin-top: var(--margin-top-30);
+  }
+
+  .services-detail-section .content-column,
+  .experiance-section .content-column {
+    order: 1;
+    margin-bottom: var(--margin-bottom-40);
+  }
+
+  .services-detail-section .image-column,
+  .experiance-section .image-column {
+    order: 2;
+  }
+
+  .insurance-section-two .insurance-block-two {
+    padding: 0px 15px;
+  }
+
+  .insurance-block-two {
+    margin-bottom: var(--margin-bottom-40);
+  }
+
+  .insurance-block-two .inner-box {
+    text-align: center;
+    border: 1px solid #b2bcc7 !important;
+  }
+
+  .insurance-section-two .inner-container {
+    border: none;
+  }
+
+  .insurance-section-two .inner-container .clearfix {
+    margin: 0px -15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .main-menu {
+    width: 100%;
+    display: none;
+  }
+
+  .main-header .sticky-header .mobile-nav-toggler,
+  .main-header .nav-outer .mobile-nav-toggler {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header-upper .logo-outer {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .main-header .sticky-header .outer-box {
+    display: block;
+    right: 15px;
+    left: auto;
+    top: 0px;
+  }
+
+  .main-header .btn-outer {
+    left: 0px;
+    top: 0px;
+    right: auto;
+    margin-top: 15px;
+    text-align: left;
+    z-index: 12;
+  }
+
+  .main-header .main-box .logo-box {
+    float: none;
+    text-align: center;
+  }
+
+  .main-header .header-lower .outer-box {
+    position: absolute;
+    z-index: 12;
+    display: block;
+  }
+
+  .nav-outer .mobile-nav-toggler {
+    display: block;
+    margin: 0;
+    padding: 8px 0 0px;
+    margin-left: 20px;
+  }
+
+  #navbarSupportedContent {
+    display: block;
+  }
+
+  .mCSB_inside > .mCSB_container {
+    margin-right: 0px;
+  }
+
+  .main-header .outer-box {
+    /* position: absolute;
+    left: 15px; */
+    margin-left: 0px;
+    padding: 2px 0px;
+  }
+
+  .main-header .header-upper .logo-box {
+    width: max-content;
+    text-align: center;
+    padding-bottom: var(--padding-bottom-10);
+  }
+
+  .main-header {
+    background-color: #f4f9fe;
+  }
+
+  .main-header .sticky-header .pull-right,
+  .sticky-header .logo {
+    width: auto;
+  }
+
+  .main-header .sticky-header .logo {
+    padding: 15px 0px !important;
+  }
+
+  .main-header .sticky-header .outer-box {
+    display: none;
+  }
+
+  .main-header .sticky-header .mobile-nav-toggler {
+    padding: 32px 0px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h2 br {
+    display: none;
+  }
+
+  .service-block .inner-box .lower-content {
+    padding: 30px 25px;
+  }
+
+  .services-section .owl-dots {
+    margin-top: 20px;
+  }
+
+  .award-block .inner-box {
+    text-align: center;
+  }
+
+  .award-block .inner-box .icon {
+    margin: 0 auto;
+  }
+
+  .cta-section .inner-container {
+    padding-left: var(--padding-left-30);
+    padding-right: var(--padding-right-30);
+  }
+
+  .main-footer .footer-bottom .pull-left,
+  .main-footer .footer-bottom .pull-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-footer .footer-bottom .copyright {
+    margin-bottom: var(--margin-bottom-15);
+  }
+
+  .about-section .content-column .bold-text {
+    font-size: var(--font-18);
+  }
+
+  .sidebar-page-container .comments-area .reply-comment .comment {
+    margin-left: var(--margin-zero);
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .choose-section .image-column .fact-counter {
+    position: relative;
+    display: block;
+    left: 0px;
+    bottom: 0px;
+    right: 10px;
+    padding-right: 0;
+  }
+
+  .sec-title .text br,
+  .insurance-block .inner-box::before,
+  .fact-counter .column .inner::before,
+  .styled-form .form-group .check-box label br {
+    display: none;
+  }
+
+  .choose-section .content-column .choose-list li strong {
+    font-size: var(--font-20);
+  }
+
+  .accordion-box .block .acc-btn {
+    font-size: var(--font-20);
+  }
+
+  h2 {
+    font-size: var(--font-30);
+  }
+
+  .testimonial-block .inner-box .quote-icon {
+    right: 0;
+  }
+
+  .testimonial-block .inner-box .author-box .author-image {
+    left: 1px;
+  }
+
+  .about-section .author-box .box-inner {
+    width: 100%;
+  }
+
+  .about-section .author-box .signature {
+    border: none;
+    display: block;
+    padding: var(--padding-zero);
+    margin-left: var(--margin-zero);
+    margin-top: var(--margin-top-30);
+  }
+
+  .login-section .form-box {
+    padding-left: var(--padding-left-20);
+    padding-right: var(--padding-right-20);
+  }
+
+  .styled-form .form-group .pull-right {
+    width: 100%;
+    display: block;
+    margin-top: var(--margin-top-10);
+  }
+
+  .privacy-section .options-list {
+    margin-left: var(--margin-zero);
+  }
+
+  .services-detail-section .content-column .bold-text {
+    font-size: var(--font-18);
+  }
+
+  .insurance-page-section .form-column .inner-column,
+  .insurance-block-two .inner-box {
+    padding-left: var(--padding-left-20);
+    padding-right: var(--padding-right-20);
+  }
+
+  .news-detail .inner-box .post-meta li {
+    margin-bottom: var(--margin-bottom-15);
+  }
+
+  .blog-author-box .author-inner {
+    padding-left: var(--padding-zero);
+  }
+
+  .blog-author-box .thumb,
+  .sidebar-page-container .comments-area .comment-box .author-thumb {
+    position: relative;
+    margin-bottom: var(--margin-bottom-25);
+  }
+
+  .sidebar-page-container .comments-area .comment {
+    padding-left: var(--padding-zero);
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  h1 {
+    font-size: var(--font-34);
+  }
+
+  h2 {
+    font-size: var(--font-26);
+  }
+
+  .choose-section .content-column .choose-list li {
+    padding-left: var(--padding-zero);
+  }
+
+  .choose-section .content-column .choose-list li .number {
+    position: relative;
+    margin-bottom: var(--margin-bottom-40);
+  }
+
+  .testimonial-block .inner-box .author-box {
+    font-size: var(--font-20);
+  }
+
+  .booking-section .booking-column .inner-column,
+  .contact-form-section .form-column .inner-column,
+  .cta-section .inner-container {
+    padding-left: var(--padding-left-20);
+    padding-right: var(--padding-right-20);
+  }
+
+  .newsletter-form .form-group button {
+    position: relative;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    margin-top: var(--margin-top-15);
+    background-color: var(--main-color-two);
+  }
+
+  .team-detail-section .content-column .bold-text {
+    font-size: var(--font-18);
+  }
+
+  .styled-form .form-group .radio-box-two .price,
+  .styled-form .form-group .radio-box-two label::before {
+    right: 20px;
+  }
+
+  .expiry-box .box-inner {
+    padding: 30px 15px;
+  }
+
+  h3 {
+    font-size: var(--font-24);
+  }
+
+  .blog-author-box,
+  .news-detail .inner-box blockquote {
+    padding: 30px 25px;
+  }
+
+  .news-detail .inner-box blockquote .icon {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    display: block;
+    margin-bottom: var(--margin-bottom-10);
+  }
+
+  .sidebar-widget .widget-content {
+    padding: 25px 20px;
+  }
+
+  .contact-info-list li {
+    font-size: var(--font-16);
+  }
+}

@@ -1,0 +1,721 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Carsore Car Insurance </title>
+    <!-- Stylesheets -->
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/niceselect.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/responsive.css" rel="stylesheet" />
+
+
+    <!-- Switcher Mockup -->
+    <link href="~/css/color-switcher-design.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Ubuntu:wght@300;400;500;700&display=swap"
+          rel="stylesheet" />
+
+    <link rel="shortcut icon" href="~/images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="~/images/favicon.png" type="image/x-icon" />
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--[if lt IE 9
+        ]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script
+      ><![endif]-->
+    <!--[if lt IE 9]><script src="~/js/respond.js"></script><![endif]-->
+</head>
+
+<body id="home-2" class="home-2">
+    <div class="page-wrapper">
+        <!-- Loading -->
+        <div class="loading-window-outer">
+            <div class="loading-window">
+                <div class="car">
+                    <div class="strike"></div>
+                    <div class="strike strike2"></div>
+                    <div class="strike strike3"></div>
+                    <div class="strike strike4"></div>
+                    <div class="strike strike5"></div>
+                    <div class="car-detail spoiler"></div>
+                    <div class="car-detail back"></div>
+                    <div class="car-detail center"></div>
+                    <div class="car-detail center1"></div>
+                    <div class="car-detail front"></div>
+                    <div class="car-detail wheel"></div>
+                    <div class="car-detail wheel wheel2"></div>
+                </div>
+
+                <div class="text">
+                    <span>Loading</span><span class="dots">...</span>
+                </div>
+            </div>
+        </div>
+        <!-- End Loading -->
+        <!-- Topbar Section -->
+        <div class="main-topbar">
+            <div class="auto-container">
+                <div class="topbar-left">
+                    <p>Welcome to <span>Carsore</span> Insurance!</p>
+                </div>
+                <div class="topbar-right">
+                    <div class="email-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14.731" height="10.585" viewBox="0 0 14.731 10.585">
+                            <path d="M14.731,42.137a.751.751,0,0,0-.751-.751H.751A.751.751,0,0,0,0,42.137v9.082a.751.751,0,0,0,.751.751H13.98a.751.751,0,0,0,.751-.751Zm-1.5,1.53a.755.755,0,0,1-.265.575L10.081,46.7l2.884,2.456a.747.747,0,0,1-.484,1.316h-.006a.768.768,0,0,1-.5-.183l-3.055-2.6-1.069.91a.752.752,0,0,1-.974,0l-1.069-.91-3.05,2.6a.786.786,0,0,1-.509.187.747.747,0,0,1-.484-1.316L4.65,46.7l-2.842-2.42a.868.868,0,0,1-.305-.661.727.727,0,0,1,1.2-.553l4.427,3.77a.367.367,0,0,0,.475,0l4.427-3.77a.727.727,0,0,1,1.2.553v.053Z"
+                                  transform="translate(0 -41.386)" fill="#fff" />
+                        </svg>
+                        <p class="text">support@carshore.com</p>
+                    </div>
+                    <div class="phone-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19.014" height="19" viewBox="0 0 19.014 19">
+                            <g id="phone-icon" transform="translate(-826.88 -412.711)">
+                                <path data-name="Path 2329"
+                                      d="M826.88,440.9a2.657,2.657,0,0,1,.885-2.089c.43-.391.822-.823,1.242-1.226a1.344,1.344,0,0,1,2.092-.008q1.106,1.073,2.177,2.18a1.337,1.337,0,0,1,0,2.115q-.617.643-1.263,1.257a.466.466,0,0,0-.105.622,12.5,12.5,0,0,0,2.927,3.7,10.546,10.546,0,0,0,2.58,1.8.454.454,0,0,0,.618-.1c.408-.431.83-.85,1.257-1.263a1.342,1.342,0,0,1,2.115,0q1.09,1.062,2.155,2.151a1.366,1.366,0,0,1-.02,2.173c-.364.371-.752.72-1.094,1.11a2.816,2.816,0,0,1-2.646.917,10.453,10.453,0,0,1-3.821-1.358,18.667,18.667,0,0,1-8.509-9.466,11.458,11.458,0,0,1-.467-1.561A8.034,8.034,0,0,1,826.88,440.9Z"
+                                      transform="translate(0 -22.559)" fill="#fff" />
+                                <path data-name="Path 2330"
+                                      d="M956.9,412.711a10.849,10.849,0,0,1,9.179,8.908l-1.4.242a9.56,9.56,0,0,0-7.968-7.728c.029-.222.058-.462.091-.7S956.864,412.968,956.9,412.711Z"
+                                      transform="translate(-120.186)" fill="#fff" />
+                                <path data-name="Path 2331"
+                                      d="M953.925,465.854l.2-1.387a6.381,6.381,0,0,1,5.528,5.31c-.234.043-.471.087-.708.129s-.46.079-.709.122A5.171,5.171,0,0,0,953.925,465.854Z"
+                                      transform="translate(-117.609 -47.912)" fill="#fff" />
+                            </g>
+                        </svg>
+                        <p class="text">+1555897965</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Header-->
+        <header class="main-header">
+            <!-- Header Upper -->
+            <div class="header-upper">
+                <div class="auto-container">
+                    <div class="inner-container clearfix">
+                        <div class="logo-box">
+                            <div class="logo">
+                                <a asp-controller="Home" asp-action="Index">
+                                    <img src="https://themeim.com/demo/carsore/images/logo-white.png" alt=""
+                                         title="" />
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="nav-outer clearfix">
+                            <!-- Mobile Navigation Toggler -->
+                            <div class="mobile-nav-toggler">
+                                <span class="icon flaticon-menu-2"></span>
+                            </div>
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-xl">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                            data-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix" id="navbarSupportedContentt">
+                                    <ul class="navigation clearfix">
+                                        <li class="current ">
+                                            <a asp-controller="Home" asp-action="Index">Home</a>
+                                            <ul>
+                                              
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="Home" asp-action="About">About Us</a>
+                                        </li>
+                                        <li class="">
+                                            <a asp-controller="Home" asp-action="Services">Services</a>
+                                            <ul>
+                                               
+                                            </ul>
+                                        </li>
+                                        <li class="">
+                                            <a asp-controller="Home" asp-action="Policy">Insurance Policy</a>
+                                        </li>
+
+                                     
+                                        @{
+                                            var userEmail = HttpContextAccessor.HttpContext?.Session.GetString("User_Email");
+                                        }
+
+                                        @if (!string.IsNullOrEmpty(userEmail))
+                                        {
+                                            
+                                            <li class="dropdown">
+                                                <a href="#">@userEmail</a>
+                                                <ul>
+                                                    <li> <a asp-controller="User" asp-action="CustomerInformation">User Profile</a></li>
+                                                    
+                                                    <li><a asp-action="Logout">Logout</a> </li>
+                                                </ul>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li class="">
+                                                <a asp-controller="Home" asp-action="Login">Login</a>
+                                            </li>
+                                            <li class="">
+                                                <a asp-controller="Home" asp-action="SignUp">Sign Up</a>
+                                            </li>
+                                        }
+                                        
+                                       
+                                    </ul>
+                                </div>
+                            </nav>
+
+                            <!-- Main Menu End-->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+            <!-- Sticky Header  -->
+            <div class="sticky-header">
+                <div class="auto-container clearfix">
+                    <!--Logo-->
+                    <div class="logo pull-left">
+                        <a href="index.html" title="">
+                            <img src="https://themeim.com/demo/carsore/images/logo-small.png" alt=""
+                                 title="" />
+                        </a>
+                    </div>
+                    <!--Right Col-->
+                    <div class="pull-right">
+                        <!-- Mobile Navigation Toggler -->
+                        <div class="mobile-nav-toggler">
+                            <span class="icon flaticon-menu-2"></span>
+                        </div>
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                            <!--Keep This Empty / Menu will come through Javascript-->
+                        </nav>
+                        <!-- Main Menu End-->
+                        <!-- Main Menu End-->
+                        <div class="outer-box clearfix header-right-content">
+                            <!-- Phone Btn -->
+
+                            <div class="search-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16.368" height="16.355" viewBox="0 0 16.368 16.355">
+                                    <g transform="translate(9.017 -6.982)">
+                                        <g transform="translate(-9.017 6.982)">
+                                            <g data-name="Group 3937">
+                                                <path data-name="Path 10536"
+                                                      d="M16.162,15.389l-4.7-4.7A6.344,6.344,0,0,0,12.948,6.61,6.475,6.475,0,0,0,0,6.614a6.481,6.481,0,0,0,10.49,5.022L15.2,16.349a.678.678,0,1,0,.959-.959ZM1.375,6.614a5.1,5.1,0,0,1,10.191,0,5.1,5.1,0,0,1-10.191,0Z"
+                                                      transform="translate(0 -0.2)" fill="#fff" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="quote-container">
+                                <a class="btn-style-one theme-btn get-a-quote" href="#">
+                                    <span class="txt">
+                                        Get A Quote
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                            <circle data-name="Ellipse 236" cx="10" cy="10" r="10" fill="#f4f9fe" />
+                                            <g data-name="Group 3845" transform="translate(7 5)">
+                                                <g data-name="right-arrow(6)">
+                                                    <g data-name="Group 662">
+                                                        <path data-name="Path 1728"
+                                                              d="M107.315,4.708,102.77.163a.56.56,0,0,0-.79,0L101.645.5a.559.559,0,0,0,0,.79L105.462,5.1l-3.821,3.821a.56.56,0,0,0,0,.79l.335.335a.56.56,0,0,0,.79,0L107.315,5.5a.564.564,0,0,0,0-.793Z"
+                                                              transform="translate(-101.478 0)" fill="#4298ee" />
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Sticky Menu -->
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <div class="close-btn">
+                    <span class="icon flaticon-multiply"></span>
+                </div>
+
+                <nav class="menu-box navbar-expand-md">
+                    <div class="nav-logo">
+                        <a asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" alt="" title="" /></a>
+                    </div>
+
+                    <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                        <ul class="navigation clearfix">
+                            <li class="current">
+                                <a asp-controller="Home" asp-action="Index">Home</a>
+                               
+                            </li>
+                            <li>
+                                <a href="about.html">About Us</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Services</a>
+                                <ul>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li>
+                                        <a href="services-detail.html">Services Detail</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Blog</a>
+                                <ul>
+                                    <li><a href="blog.html">Our Blog</a></li>
+                                    <li><a href="news-detail.html">Blog Single</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Team</a>
+                                <ul>
+                                    <li><a href="team.html">Team</a></li>
+                                    <li>
+                                        <a href="team-detail.html">Team Detail</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Pages</a>
+                                <ul>
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="signup.html">Sign Up</a></li>
+                                    <li><a href="privacy.html">Privacy Policy</a></li>
+                                    <li><a href="terms.html">Terms & Condition</a></li>
+                                    <li>
+                                        <a href="insurance-form.html">Insurance Form</a>
+                                    </li>
+                                    <li><a href="not-found.html">Not Found</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- End Mobile Menu -->
+        </header>
+        <!-- End Main Header -->
+
+            @RenderBody()
+        <!-- Main Footer -->
+        <footer class="main-footer"
+                style="background-image: url(https://themeim.com/demo/carsore/images/background/footer-bg.png )">
+            <div class="auto-container">
+                <!-- Upper Box -->
+                <div class="upper-box">
+                    <div class="row clearfix">
+                        <!-- Info Column -->
+                        <div class="info-column col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="56.667" height="56.667" viewBox="0 0 56.667 56.667">
+                                    <path data-name="Path 2304" d="M19,0A19,19,0,1,1,0,19,19,19,0,0,1,19,0Z" transform="translate(9 10)"
+                                          fill="#fefefe" />
+                                    <g data-name="phone-call(1)">
+                                        <g data-name="Group 164">
+                                            <path data-name="Path 105"
+                                                  d="M48.365,8.3a28.333,28.333,0,1,0,8.3,20.032A28.333,28.333,0,0,0,48.365,8.3ZM42.909,39.468l0,0v-.009L41.47,40.888a7.556,7.556,0,0,1-7.131,2.04,25.105,25.105,0,0,1-7.291-3.268A33.687,33.687,0,0,1,21.3,35.023,33.945,33.945,0,0,1,17,29.81a26.441,26.441,0,0,1-3.23-6.536,7.555,7.555,0,0,1,1.889-7.716l1.681-1.681a1.2,1.2,0,0,1,1.7,0l0,0,5.308,5.308a1.2,1.2,0,0,1,0,1.7l0,0L21.231,24a2.54,2.54,0,0,0-.264,3.306A36.449,36.449,0,0,0,24.7,31.661a36.226,36.226,0,0,0,4.911,4.127,2.559,2.559,0,0,0,3.268-.283l3.013-3.06a1.2,1.2,0,0,1,1.7,0l0,0,5.317,5.327A1.2,1.2,0,0,1,42.909,39.468Z"
+                                                  transform="translate(0 0)" fill="#4298ee" />
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="text">
+                                    <div class="title">call now</div>
+                                    <a href="tel:+10909876534">+10909876534</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Info Column -->
+                        <div class="info-column col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-column">
+                                <svg data-name="Group 177" xmlns="http://www.w3.org/2000/svg" width="58" height="58"
+                                     viewBox="0 0 58 58">
+                                    <circle data-name="Ellipse 25" cx="29" cy="29" r="29" fill="#4298ee" />
+                                    <g transform="translate(14.201 19.333)">
+                                        <g data-name="Group 170" transform="translate(20.77 1.859)">
+                                            <g data-name="Group 169" transform="translate(0 0)">
+                                                <path data-name="Path 106"
+                                                      d="M371.5,115.988l-8.319,8.319,8.114,8.12a2.832,2.832,0,0,0,.4-1.429v-14A2.835,2.835,0,0,0,371.5,115.988Z"
+                                                      transform="translate(-363.186 -115.988)" fill="#fefefe" />
+                                            </g>
+                                        </g>
+                                        <g data-name="Group 172" transform="translate(1.55 0)">
+                                            <g data-name="Group 171" transform="translate(0 0)">
+                                                <path data-name="Path 107"
+                                                      d="M51.971,83.476H28.419a2.827,2.827,0,0,0-1.314.334l12.5,12.5a.973.973,0,0,0,1.349,0L53.4,83.875A2.831,2.831,0,0,0,51.971,83.476Z"
+                                                      transform="translate(-27.105 -83.476)" fill="#fefefe" />
+                                            </g>
+                                        </g>
+                                        <g data-name="Group 174" transform="translate(0 1.723)">
+                                            <g data-name="Group 173" transform="translate(0 0)">
+                                                <path data-name="Path 108"
+                                                      d="M.24,113.611A2.842,2.842,0,0,0,0,114.752v14a2.829,2.829,0,0,0,.386,1.409l8.2-8.207Z"
+                                                      transform="translate(0 -113.611)" fill="#fefefe" />
+                                            </g>
+                                        </g>
+                                        <g data-name="Group 176" transform="translate(1.83 11.426)">
+                                            <g data-name="Group 175">
+                                                <path data-name="Path 109"
+                                                      d="M49.59,283.375l-2.654,2.661a2.882,2.882,0,0,1-4.055,0l-2.763-2.769-8.112,8.107a2.839,2.839,0,0,0,1.034.2H56.592a2.835,2.835,0,0,0,1.01-.193Z"
+                                                      transform="translate(-32.006 -283.267)" fill="#fefefe" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="text">
+                                    <div class="title">24*7 online Support</div>
+                                    <a href="mailto:carsore@mail.com">carsore@mail.com</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Info Column -->
+                        <div class="info-column col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="56.997" height="56.997" viewBox="0 0 56.997 56.997">
+                                    <circle data-name="Ellipse 57" cx="20" cy="20" r="20" transform="translate(8.599 8)" fill="#fefefe" />
+                                    <g>
+                                        <g data-name="Group 179">
+                                            <g data-name="Group 178">
+                                                <circle data-name="Ellipse 26" cx="4.588" cy="4.588" r="4.588"
+                                                        transform="translate(23.993 16.42)" fill="#4298ee" />
+                                                <path data-name="Path 110"
+                                                      d="M28.5,0A28.5,28.5,0,1,0,57,28.5,28.5,28.5,0,0,0,28.5,0ZM28.44,13.048l.06,0,.06,0A8.887,8.887,0,0,1,37.267,21.9c0,5.872-6.274,11.818-8.768,13.949-.167-.142-.351-.3-.549-.479l-.009-.008c-2.759-2.452-8.209-7.988-8.209-13.462A8.887,8.887,0,0,1,28.44,13.048Zm.183,31.077c-5.256,0-10.577-1.508-10.577-4.388,0-2.022,2.62-3.366,6-3.989.653.657,1.272,1.236,1.814,1.719-3.679.411-5.841,1.576-5.841,2.269,0,.852,3.267,2.417,8.605,2.417s8.606-1.566,8.606-2.417c0-.708-2.253-1.9-6.066-2.29.547-.489,1.171-1.073,1.829-1.737,3.479.606,6.208,1.964,6.208,4.027C39.2,42.618,33.879,44.126,28.623,44.126Z"
+                                                      transform="translate(-0.001)" fill="#4298ee" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="text">
+                                    <div class="title">Office Address</div>
+                                    <strong>4309 Terry Lane, USA</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Upper Box -->
+                    <!-- Widgets Section -->
+                    <div class="widgets-section">
+                        <div class="row clearfix">
+                            <!-- Footer Column -->
+                            <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                                <div class="footer-widget logo-widget">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <img src="https://themeim.com/demo/carsore/~/images/home-2-footer-logo.png"
+                                                 alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting industry. Lorem Ipsum has been the industry's
+                                        standard dummy text.
+                                    </div>
+                                    <!-- Social Box -->
+                                    <ul class="social-box">
+                                        <li>
+                                            <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.twitter.com/" class="fab fa-twitter"></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://google.com/" class="fab fa-google"></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/" class="fab fa-linkedin-in"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Footer Column -->
+                            <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                                <div class="footer-widget links-widget">
+                                    <div class="row clearfix">
+                                        <!-- Column -->
+                                        <div class="column col-lg-6 col-md-6 col-sm-12">
+                                            <h3>Company</h3>
+                                            <ul class="list-links">
+                                                <li><a href="#">About us</a></li>
+                                                <li><a href="#">our team</a></li>
+                                                <li><a href="#">Services</a></li>
+                                                <li><a href="#">insurance</a></li>
+                                                <li><a href="#">blog</a></li>
+                                                <li><a href="#">contact us</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column -->
+                                        <div class="column col-lg-6 col-md-6 col-sm-12">
+                                            <h3>Insurance</h3>
+                                            <ul class="list-links">
+                                                <li><a href="#">car insurance</a></li>
+                                                <li><a href="#">bike insurance</a></li>
+                                                <li><a href="#">bus insurance</a></li>
+                                                <li><a href="#">mini truck insurance</a></li>
+                                                <li><a href="#">jeep insurance</a></li>
+                                                <li><a href="#">lorry insurance</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Footer Column -->
+                            <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                                <div class="footer-widget quote-widget">
+                                    <h3>Request a Quote</h3>
+
+                                    <!-- Quote Form -->
+                                    <div class="quote-form">
+                                        <form method="post" action="appointment.html">
+                                            <div class="clearfix">
+                                                <div class="form-group">
+                                                    <input type="text" name="username" placeholder="Your Name *" required="" />
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <input type="email" name="email" placeholder="Your Email" required="" />
+                                                </div>
+
+                                                <!--Form Group-->
+                                                <div class="form-group">
+                                                    <select class="custom-select-box nice-select">
+                                                        <option>Your Subject</option>
+                                                        <option>Subject 01</option>
+                                                        <option>Subject 02</option>
+                                                        <option>Subject 03</option>
+                                                        <option>Subject 04</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <button class="theme-btn submit-btn" type="submit" name="submit-form">
+                                                        Submit Now
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Main Footer -->
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="row">
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <div class="copyright">
+                                Copyright &copy; 2021. All rights reserved by <br />
+                                <span>Carsore Company.</span>
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                            <ul class="footer-nav">
+                                <li><a href="terms.html">Terms & Condition</a></li>
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright Section -->
+        <!-- Calculator Palate  -->
+        <div class="calculator-palate">
+            <div class="calculator-trigger">
+                <i class="flaticon-keys"></i>
+            </div>
+            <span class="palate-tag">Calculator</span>
+            <div class="palate-content">
+                <!-- Styled Form -->
+                <div class="styled-form style-two">
+                    <form method="post" action="index.html">
+                        <!-- Form Group -->
+                        <div class="form-group">
+                            <label>What is your vehicle number*</label>
+                            <span class="icon flaticon-user-2"></span>
+                            <input type="text" name="username" value="" placeholder="Your policy number" required />
+                        </div>
+
+                        <!-- Form Group -->
+                        <div class="form-group">
+                            <label>What is your city*</label>
+                            <span class="icon flaticon-edit"></span>
+                            <select class="custom-select-box nice-select">
+                                <option>Your City</option>
+                                <option>City 01</option>
+                                <option>City 02</option>
+                                <option>City 03</option>
+                                <option>City 04</option>
+                            </select>
+                        </div>
+
+                        <!-- Form Group -->
+                        <div class="form-group">
+                            <label>What is your car model?*</label>
+                            <span class="icon flaticon-edit"></span>
+                            <select class="custom-select-box nice-select">
+                                <option>Your VPN Number</option>
+                                <option>VPN 01</option>
+                                <option>VPN 02</option>
+                                <option>VPN 03</option>
+                                <option>VPN 04</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>What is you car fuel type*</label>
+                            <span class="icon flaticon-edit"></span>
+                            <select class="custom-select-box nice-select">
+                                <option>Your Car fuel type</option>
+                                <option>fuel 01</option>
+                                <option>fuel 02</option>
+                                <option>fuel 03</option>
+                                <option>fuel 04</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>What is you car Purchase date & year*</label>
+                            <span class="icon flaticon-edit"></span>
+                            <span class="calendar-icon flaticon-calendar"></span>
+                            <input class="datepicker" autocomplete="off" type="text" name="username" value="" placeholder="DD/MM/YYYY"
+                                   required />
+                        </div>
+
+                        <div class="row clearfix">
+                            <!-- Column -->
+                            <div class="column col-lg-6 col-md-6 col-sm-12">
+                                <h6>Vehicle for:</h6>
+                                <div class="form-group margin">
+                                    <div class="radio-box">
+                                        <input type="radio" name="remember-password" id="type-1" />
+                                        <label for="type-1">Commercial use</label>
+                                    </div>
+                                </div>
+                                <div class="form-group margin">
+                                    <div class="radio-box">
+                                        <input type="radio" name="remember-password" id="type-2" />
+                                        <label for="type-2">Personal Use</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Column -->
+                            <div class="column col-lg-6 col-md-6 col-sm-12">
+                                <h6>Policy status:</h6>
+                                <div class="form-group margin">
+                                    <div class="radio-box">
+                                        <input type="radio" name="remember-password" id="type-3" />
+                                        <label for="type-3">Policy Expired</label>
+                                    </div>
+                                </div>
+                                <div class="form-group margin">
+                                    <div class="radio-box">
+                                        <input type="radio" name="remember-password" id="type-4" />
+                                        <label for="type-4">Policy not expired</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="theme-btn btn-style-four">
+                                <span class="txt">Calculator </span><i class="fa fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End Calculator Palate  -->
+        <!-- Contact Palate  -->
+        <div class="cantact-palate">
+            <div class="calculator-trigger">
+                <i class="flaticon-envelope"></i>
+            </div>
+            <span class="palate-tag">Contact Form</span>
+            <div class="palate-content">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form method="post" action="contact.html">
+                        <div class="form-group">
+                            <label>Enter Your Name*</label>
+                            <input type="text" name="username" placeholder="Your Name" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Enter Your Email*</label>
+                            <input type="email" name="email" placeholder="Your Email" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Subject (Optional)</label>
+                            <input type="text" name="subject" placeholder="Your Subject" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Your Message</label>
+                            <textarea name="message" placeholder="Type Your Message"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="theme-btn btn-style-four">
+                                <span class="txt">Send Now </span><i class="fa fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- eND Contact Form -->
+            </div>
+        </div>
+        <!-- End Contact Palate  -->
+    </div>
+    <!-- End pagewrapper -->
+    <!-- Scroll To Top -->
+    <div class="scroll-to-top scroll-to-target" data-target="html">
+        <span class="fa fa-arrow-up"></span>
+    </div>
+
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.fancybox.js"></script>
+    <script src="~/js/appear.js"></script>
+    <script src="~/js/parallax.min.js"></script>
+    <script src="~/js/tilt.jquery.min.js"></script>
+    <script src="~/js/jquery.paroller.min.js"></script>
+    <script src="~/js/owl.js"></script>
+    <script src="~/js/wow.js"></script>
+    <script src="~/js/nav-tool.js"></script>
+    <script src="~/js/jquery-ui.js"></script>
+    <script src="~/js/jquery.nice-select.min.js"></script>
+    <script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/js/script.js"></script>
+    <script src="~/js/color-settings.js"></script>
+</body>
+
+</html>

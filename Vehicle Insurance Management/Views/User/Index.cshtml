@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "_user_panel";
+}
+@if (TempData["CIVIError"] != null)
+{
+
+    <script>
+        alert("@TempData["CIVIError"]");
+    </script>
+}
+<!-- Main Content -->
+<div class="flex-1 p-8">
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-800"></h1>
+
+    </div>
+
+    <!-- Vehicles Grid -->
+    <!-- Hero Section -->
+    <header class="text-center py-20 bg-blue-600 text-white">
+        <h2 class="text-4xl font-bold mb-4">Protect Your Vehicle with the Best Insurance</h2>
+        <p class="text-lg mb-6">Get comprehensive insurance coverage for your vehicle in just a few clicks.</p>
+        <a href="register.html" class="bg-white text-blue-700 px-6 py-3 rounded-lg text-lg font-semibold">Get Started</a>
+    </header>
+
+    <!-- Features Section -->
+    <section class="p-10 text-center">
+        <h3 class="text-3xl font-bold mb-8">Why Choose Us?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-car text-blue-700 text-4xl mb-4"></i>
+                <h4 class="text-xl font-semibold">Comprehensive Coverage</h4>
+                <p class="text-gray-600">We provide full coverage for accidents, theft, and damages.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-handshake text-blue-700 text-4xl mb-4"></i>
+                <h4 class="text-xl font-semibold">Affordable Plans</h4>
+                <p class="text-gray-600">Choose from a variety of insurance plans that fit your budget.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-phone-alt text-blue-700 text-4xl mb-4"></i>
+                <h4 class="text-xl font-semibold">24/7 Support</h4>
+                <p class="text-gray-600">Our support team is available anytime you need assistance.</p>
+            </div>
+        </div>
+    </section>
+    </div>
+    

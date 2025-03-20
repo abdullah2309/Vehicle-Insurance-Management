@@ -1,0 +1,232 @@
+/*** 
+
+====================================================================
+	Root Code Variables
+====================================================================
+
+ ***/
+
+/* Theme Color */
+
+:root {
+  /* #4298ef in decimal RGB */
+  --main-color: rgb(66, 152, 239);
+
+  /* #4298ef in decimal RGBA */
+  --main-color-light: rgb(66, 152, 239, 0.15);
+
+  /* #002245 in decimal RGB */
+  --main-color-two: rgb(0, 34, 69);
+}
+
+/*** 
+
+====================================================================
+	Calculator Palate Style
+====================================================================
+
+***/
+
+.calculator-palate {
+  -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: -470px;
+  bottom: 140px;
+  transition: all 0.5s ease 0s;
+  width: 470px;
+  z-index: 99999;
+}
+
+.calculator-palate .palate-tag {
+  position: absolute;
+  left: -215px;
+  bottom: 4px;
+  width: 125px;
+  text-align: center;
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 3px;
+  background-color: #010101;
+  font-size: var(--font-14);
+}
+
+.calculator-palate .palate {
+  background: var(--main-color) none repeat scroll 0 0;
+  display: block;
+  float: left;
+  height: 45px;
+  margin: 0 2.5% 12px;
+  width: 20%;
+  cursor: pointer;
+  position: relative;
+}
+
+.calculator-trigger {
+  background: var(--main-color) none repeat scroll 0 0;
+  cursor: pointer;
+  height: 50px;
+  left: -70px;
+  position: absolute;
+  bottom: 0px;
+  width: 50px;
+  border-radius: 50px;
+  padding-top: 6px;
+  text-align: center;
+}
+
+.calculator-trigger:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.calculator-trigger i {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.calculator-palate.visible-palate {
+  right: 0px;
+}
+
+.calculator-palate .palate-content {
+  position: relative;
+  height: 680px;
+  overflow-y: auto;
+}
+
+/* width */
+.calculator-palate .palate-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.calculator-palate .palate-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.calculator-palate .palate-content::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.calculator-palate .palate-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*** 
+
+====================================================================
+	Cantact Palate Style
+====================================================================
+
+***/
+
+.cantact-palate {
+  -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: -400px;
+  bottom: 70px;
+  transition: all 0.5s ease 0s;
+  width: 400px;
+  z-index: 99999;
+}
+
+.cantact-palate .palate {
+  background: var(--main-color) none repeat scroll 0 0;
+  display: block;
+  float: left;
+  height: 45px;
+  margin: 0 2.5% 12px;
+  width: 20%;
+  cursor: pointer;
+  position: relative;
+}
+
+.cantact-trigger {
+  background: var(--main-color) none repeat scroll 0 0;
+  cursor: pointer;
+  height: 50px;
+  left: -50px;
+  position: absolute;
+  top: 0;
+  width: 50px;
+  border-radius: 50px;
+  padding-top: 6px;
+  text-align: center;
+}
+
+.cantact-trigger:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.cantact-trigger i {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.cantact-palate.visible-palate {
+  right: 0px;
+}
+
+.cantact-palate .palate-content {
+  position: relative;
+  height: 580px;
+  overflow-y: auto;
+  padding: 30px 30px;
+  border-radius: 7px;
+  letter-spacing: 1px;
+  background-color: var(--main-color-two);
+}
+
+.cantact-palate .palate-tag {
+  position: absolute;
+  left: -215px;
+  bottom: 4px;
+  width: 125px;
+  text-align: center;
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 3px;
+  background-color: #010101;
+  font-size: var(--font-14);
+}
+
+/* width */
+.cantact-palate .palate-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.cantact-palate .palate-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.cantact-palate .palate-content::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.cantact-palate .palate-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

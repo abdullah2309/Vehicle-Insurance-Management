@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Vehicle_Insurance_Management.Models.Vehicle_Information>
+
+@{
+    Layout = "_Admin_Layout";
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Vehicle List</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-responsive-sm">
+                            <thead>
+                                <tr>
+                                    <th>@Html.DisplayNameFor(model => model.VehicleName)</th>
+                                    <th>@Html.DisplayNameFor(model => model.OwnerName)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Model)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Version)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Rate)</th>
+                                    <th>@Html.DisplayNameFor(model => model.BodyNumber)</th>
+                                    <th>@Html.DisplayNameFor(model => model.EngineNumber)</th>
+                                    <th>@Html.DisplayNameFor(model => model.VehicleNumber)</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null)
+                                {
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@Html.DisplayFor(modelItem => item.VehicleName)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.OwnerName)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Model)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Version)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Rate)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.BodyNumber)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.EngineNumber)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.VehicleNumber)</td>
+                                            <td>
+                                                <a asp-action="DeleteVehicle" asp-route-id="@item.VehicleId" class="btn btn-danger btn-sm">Delete</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="9" class="text-center">No Vehicle Data Found</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

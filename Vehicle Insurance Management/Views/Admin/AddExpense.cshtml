@@ -1,0 +1,70 @@
+﻿@model Vehicle_Insurance_Management.Models.CompanyExpenses
+
+@{
+    ViewData["Title"] = "Add Company Expense";
+    Layout = "_Admin_Layout";
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <div class="row page-titles mx-0">
+            <div class="col-sm-6 p-md-0">
+                <div class="welcome-text">
+                    <h4>Manage Showroom Expenses – Add New Expense</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button to Trigger Modal -->
+        <div class="container mt-5">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#expenseModal">
+                Add Expense
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="expenseModal" tabindex="-1" aria-labelledby="expenseModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="expenseModalLabel">Add New Expense</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <form  asp-action="AddExpense" method="post">
+                            <div class="mb-3">
+                                <label for="DateOfExpense" class="form-label">Date of Expense</label>
+                                <input type="date" class="form-control" asp-for="DateOfExpense" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="TypeOfExpense" class="form-label">Type of Expense</label>
+                                <input type="text" class="form-control" asp-for="TypeOfExpense" placeholder="Enter Expense Type" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="AmountOfExpense" class="form-label">Amount</label>
+                                <input type="number" class="form-control" asp-for="AmountOfExpense" placeholder="Enter Amount" required>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Add Expense</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- Display Added Expenses -->
+        @Html.Partial("_ShowExpenses", ViewData["ShowExpenses"])
+
+    </div>
+</div>

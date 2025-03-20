@@ -1,0 +1,63 @@
+﻿@model Vehicle_Insurance_Management.Models.Vehicle_Information
+@{
+    Layout = "_user_panel";
+}
+
+<div class="flex-1 p-8">
+    <br>
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-6">Vehicle Information</h1>
+
+        @if (Model != null)
+        {
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Vehicle Name:</span>
+                    <span class="text-gray-800 font-medium">@Model.VehicleName</span>
+                </div>
+
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Owner Name:</span>
+                    <span class="text-gray-800 font-medium">@Model.OwnerName</span>
+                </div>
+
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Model:</span>
+                    <span class="text-gray-800 font-medium">@Model.Model</span>
+                </div>
+
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Version:</span>
+                    <span class="text-gray-800 font-medium">@Model.Version</span>
+                </div>
+
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Rate:</span>
+                    <span class="text-gray-800 font-medium">@Model.Rate</span>
+                </div>
+
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Body Number:</span>
+                    <span class="text-gray-800 font-medium">@Model.BodyNumber</span>
+                </div>
+
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Engine Number:</span>
+                    <span class="text-gray-800 font-medium">@Model.EngineNumber</span>
+                </div>
+
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Vehicle Number:</span>
+                    <span class="text-gray-800 font-medium">@Model.VehicleNumber</span>
+                </div>
+            </div>
+            <br>
+
+            <div class="mt-6">
+                <a asp-route-id="@Model.VehicleId" asp-action="V_I_Edit" class="bg-blue-700 text-white px-6 py-2 rounded-lg text-lg hover:bg-blue-800 transition duration-200 shadow-md">
+                    Edit Information
+                </a>
+            </div>
+        }
+    </div>
+</div>

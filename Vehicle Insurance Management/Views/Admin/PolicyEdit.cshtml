@@ -1,0 +1,34 @@
+﻿@model EcommerceShop.Models.Addpolicytype
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "_Admin_Layout";
+
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+        <h1>Edit Policy</h1>
+
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-controller="Admin" asp-action="PolicyEdit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="id" />
+                    <div class="form-group">
+                        <label asp-for="policy_name" class="control-label"></label>
+                        <input asp-for="policy_name" class="form-control" />
+                        <span asp-validation-for="policy_name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+

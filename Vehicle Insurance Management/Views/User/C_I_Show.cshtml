@@ -1,0 +1,63 @@
+﻿@model Vehicle_Insurance_Management.Models.Customer_Information
+@{
+    Layout = "_user_panel";
+}
+
+<div class="flex-1 p-8"><br>
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-6">Customer Information </h1>
+    
+
+        @if (Model != null)
+        {
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Name:</span>
+                    <span class="text-gray-800 font-medium">@Model.Name</span>
+                </div>
+                
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Address:</span>
+                    <span class="text-gray-800 font-medium">@Model.Address</span>
+                </div>
+
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Phone:</span>
+                    <span class="text-gray-800 font-medium">@Model.PhoneNumber</span>
+                </div>
+
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">CNIC:</span>
+                    <span class="text-gray-800 font-medium">@Model.CNIC</span>
+                </div>
+
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Date of Issue:</span>
+                    <span class="text-gray-800 font-medium">@Model.DateOfIssue.ToShortDateString()</span>
+                </div>
+
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Date of Expiry:</span>
+                    <span class="text-gray-800 font-medium">@Model.DateOfExpiry.ToShortDateString()</span>
+                </div>
+
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Date of Birth:</span>
+                    <span class="text-gray-800 font-medium">@Model.DateOfBirth.ToShortDateString()</span>
+                </div>
+
+                <div class="flex items-center">
+                    <span class="text-gray-500 text-lg font-semibold w-32">Sex:</span>
+                    <span class="text-gray-800 font-medium">@Model.Sex</span>
+                </div>
+            </div>
+            <br>
+
+            <div class="mt-6">
+                <a asp-route-id="@Model.Id" asp-action="C_I_Edit" class="bg-blue-700 text-white px-6 py-2 rounded-lg text-lg hover:bg-blue-800 transition duration-200 shadow-md">
+                    Edit Information
+                </a>
+            </div>
+        }
+</div>
+</div>

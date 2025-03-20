@@ -1,0 +1,64 @@
+﻿@model EcommerceShop.Models.Addpolicytype;
+
+
+@{
+    ViewData["Title"] = "Add Category";
+    Layout = "_Admin_Layout";
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <div class="row page-titles mx-0">
+            <div class="col-sm-6 p-md-0">
+                <div class="welcome-text">
+                    <h4>Boost Your Sales – Add New Policy Types in Just a Click!</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button to Trigger Modal -->
+        <div class="container mt-5">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#categoryModal">
+                Add Policy Types
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="categoryModalLabel">Add Policy</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <form asp-controller="Admin" asp-action="AddPolicyType" method="post">
+                            <div class="mb-3">
+                                <label for="CategoryName" class="form-label">Category Name</label>
+                                <input type="text" class="form-control" asp-for="policy_name" placeholder="Enter Policy Name" required>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Add Policy</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+
+        @Html.Partial("_ShowPolicyType", ViewData["ShowPolicyType"]);
+
+
+
+    </div>
+</div>

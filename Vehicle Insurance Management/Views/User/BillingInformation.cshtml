@@ -1,0 +1,69 @@
+﻿@model Vehicle_Insurance_Management.Models.BillingInformation
+@{
+    Layout = "_user_panel";
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+
+    <script>
+        alert("@TempData["ErrorMessage"]");
+    </script>
+}
+
+<div class="flex-1 p-8">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-extrabold mb-6 text-center">Billing Information</h1>
+
+        <form method="post" asp-action="BillingInformation">
+            <input type="hidden" asp-for="CustomerId" />
+            <input type="hidden" asp-for="VehicleId" />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-gray-700 font-semibold">Policy Number</label>
+                    <input class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" asp-for="Policynumber" type="number" required />
+                    <span asp-validation-for="Policynumber" class="text-red-500 text-sm"></span>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Address Proof</label>
+                    <input class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" asp-for="CustomerAddProof" type="file" required />
+                    <span asp-validation-for="CustomerAddProof" class="text-red-500 text-sm"></span>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Phone Number</label>
+                    <input class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" asp-for="CustomerPhoneNumber" type="text" required />
+                    <span asp-validation-for="CustomerPhoneNumber" class="text-red-500 text-sm"></span>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Email</label>
+                    <input class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" asp-for="CustomerEmail" type="email" required />
+                    <span asp-validation-for="CustomerEmail" class="text-red-500 text-sm"></span>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Date</label>
+                    <input class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" asp-for="Date" type="date" required />
+                    <span asp-validation-for="Date" class="text-red-500 text-sm"></span>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Amount</label>
+                    <input class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" asp-for="Amount" type="number" required />
+                    <span asp-validation-for="Amount" class="text-red-500 text-sm"></span>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="mt-6 flex justify-center">
+                <button type="submit" class="flex items-center bg-blue-700 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-200">
+                    <i class="fas fa-save mr-2"></i> Save Billing Information
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

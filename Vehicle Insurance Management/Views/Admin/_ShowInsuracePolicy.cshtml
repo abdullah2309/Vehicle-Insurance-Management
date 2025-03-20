@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Vehicle_Insurance_Management.Models.insurancepolicy> 
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Product List</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-responsive-sm">
+                    <thead>
+                        <tr>
+                            <th>Policy Number</th>
+                            <th>@Html.DisplayNameFor(model => model.PolicyType)</th>
+                            <th>@Html.DisplayNameFor(model => model.PolicyDescription)</th>
+                            <th>@Html.DisplayNameFor(model => model.PolicyImages)</th>
+                       
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null)
+                        {
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@Html.DisplayFor(modelItem => item.PolicyName)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Addpolicytype.policy_name)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.PolicyDescription)</td>
+                                    <td>
+                                        <img src="~/policyimages/@item.PolicyImages" asp-append-version="true" alt="Product Image" style="width: 100px; height: 80px;">
+                                    </td>
+                                   
+                                    <td style="width: 150px; ">
+                                        <a asp-action="EditInsuracePolicy" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
+                                        <a asp-action="DeleteInsuracePolicy" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

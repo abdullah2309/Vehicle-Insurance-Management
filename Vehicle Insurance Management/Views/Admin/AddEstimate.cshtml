@@ -1,0 +1,75 @@
+﻿@model Vehicle_Insurance_Management.Models.Estimate
+
+@{
+    Layout = "_Admin_Layout";
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+        <h1>Manage Vehicle Estimates</h1>
+
+        <!-- Button to Open Modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#estimateModal">
+            Add New Estimate
+        </button>
+
+        <!-- Estimate Modal -->
+        <div class="modal fade" id="estimateModal" tabindex="-1" aria-labelledby="estimateModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="estimateModalLabel">Create Estimate</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <form asp-action="AddEstimate" method="post">
+                            <div class="mb-3">
+                                <label class="form-label">Customer</label>
+                                <select asp-for="CustomerId" class="form-control" asp-items="ViewBag.CustomerList"></select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Vehicle Name</label>
+                                <input asp-for="VehicleName" class="form-control" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Vehicle Model</label>
+                                <input asp-for="VehicleModel" class="form-control" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Vehicle Rate</label>
+                                <input asp-for="VehicleRate" class="form-control" type="number" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Vehicle Warranty</label>
+                                <input asp-for="VehicleWarranty" class="form-control" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Vehicle Policy Type</label>
+                                <input asp-for="VehiclePolicyType" class="form-control" required />
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Add Estimate</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- Display Added Estimates -->
+        @Html.Partial("_showEstimates", ViewData["showEstimates"])
+
+    </div>
+</div>

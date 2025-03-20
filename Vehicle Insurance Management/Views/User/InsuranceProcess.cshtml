@@ -1,0 +1,45 @@
+﻿
+@using Vehicle_Insurance_Management.Models
+@model insurance_process
+
+@{
+    Layout = "_user_panel";
+}
+
+<div class="flex-1 p-8">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+
+        <h1 class="text-2xl font-bold mb-6">Insurance Process</h1>
+
+        <form method="post" asp-action="InsuranceProcess">
+            <input type="hidden" asp-for="CustomerId" />
+            <input type="hidden" asp-for="VehicleId" />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-gray-700 font-semibold">Policy Number</label>
+                    <input class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" asp-for="PolicyNumber" type="text" required />
+                    <span asp-validation-for="PolicyNumber" class="text-red-500 text-sm"></span>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Policy Date</label>
+                    <input class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" asp-for="PolicyDate" type="date" required />
+                    <span asp-validation-for="PolicyDate" class="text-red-500 text-sm"></span>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Policy Duration (Months)</label>
+                    <input class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" asp-for="PolicyDuration" type="number" required />
+                    <span asp-validation-for="PolicyDuration" class="text-red-500 text-sm"></span>
+                </div>
+            </div>
+
+            <div class="mt-6 flex justify-center">
+                <button type="submit" class="bg-blue-700 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-200">
+                    Submit Insurance
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

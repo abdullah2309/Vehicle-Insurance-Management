@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Vehicle_Insurance_Management.Models.Feedback>
+
+@{
+    Layout = "_Admin_Layout";
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">User Feedback</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-responsive-sm">
+                            <thead>
+                                <tr>
+                                    <th>@Html.DisplayNameFor(model => model.Name)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Email)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Message)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Rating)</th>
+                                    <th>@Html.DisplayNameFor(model => model.SubmittedAt)</th>
+                                  
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null && Model.Any())
+                                {
+                                    @foreach (var feedback in Model)
+                                    {
+                                        <tr>
+                                            <td>@Html.DisplayFor(modelItem => feedback.Name)</td>
+                                            <td>@Html.DisplayFor(modelItem => feedback.Email)</td>
+                                            <td>@Html.DisplayFor(modelItem => feedback.Message)</td>
+                                            <td>@Html.DisplayFor(modelItem => feedback.Rating)</td>
+                                            <td>@feedback.SubmittedAt.ToString("yyyy-MM-dd HH:mm")</td>
+                                           
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="6" class="text-center">No feedback found.</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

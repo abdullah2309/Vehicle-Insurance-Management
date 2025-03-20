@@ -1,0 +1,80 @@
+﻿@model Vehicle_Insurance_Management.Models.Customer_Information
+@{
+    Layout = "_user_panel";
+}
+
+<!-- Main Content -->
+<div class="flex-1 p-8">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-6">Customer Information </h1>
+        <form method="post" asp-action="CustomerInformation">
+
+
+        <!-- Car Information -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-4">Customer Name</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">Name</label>
+                    <input class="w-full p-2 border rounded" asp-for="Name" type="text" required/>
+                    <span asp-validation-for="Name" class="text-red-500"></span>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Address</label>
+                        <input class="w-full p-2 border rounded" asp-for="Address" type="text" required />
+                        <span asp-validation-for="Address" class="text-red-500"></span>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Phone Number</label>
+                        <input class="w-full p-2 border rounded" asp-for="PhoneNumber" type="text" required />
+                        <span asp-validation-for="PhoneNumber" class="text-red-500"></span>
+                </div>
+                <div>
+                    <label class="block text-gray-700">CNIC</label>
+                        <input class="w-full p-2 border rounded" asp-for="CNIC" type="text" required />
+                        <span asp-validation-for="CNIC" class="text-red-500"></span>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700">Date of Issue</label>
+                        <input class="w-full p-2 border rounded" asp-for="DateOfIssue" type="date" required />
+                        <span asp-validation-for="DateOfIssue" class="text-red-500"></span>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Date of Expiry</label>
+                        <input class="w-full p-2 border rounded" asp-for="DateOfExpiry" type="date" required />
+                        <span asp-validation-for="DateOfExpiry" class="text-red-500"></span>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-gray-700">Date of Birth</label>
+                    <input class="w-full p-2 border rounded" asp-for="DateOfBirth" type="date" required />
+                    <span asp-validation-for="DateOfBirth" class="text-red-500"></span>
+            </div>
+            <div>
+                <label class="block text-gray-700">Sex</label>
+                    <select class="w-full p-2 border rounded" asp-for="Sex">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+
+      
+            <div class="flex   mb-6">
+
+                <button type="submit" class=" px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300 flex items-center space-x-2 cursor-pointer">
+                    <i class="fas fa-upload"></i>
+                    <span>Submit Information</span>
+                </button>
+            </div>
+
+        </div>
+
+</form>
+    </div>
+</div>

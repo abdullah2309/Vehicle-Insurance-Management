@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Vehicle_Insurance_Management.Models.insurance_process>
+
+@{
+    Layout = "_Admin_Layout";
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Insurance Process List</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-responsive-sm">
+                            <thead>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <th>Vehicle</th>
+                                    <th>Policy Number</th>
+                                    <th>Policy Date</th>
+                                    <th>Duration (Months)</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null && Model.Any())
+                                {
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@(item.Customer != null ? item.Customer.Name : "N/A")</td>
+                                            <td>@(item.Vehicle != null ? item.Vehicle.Model : "N/A")</td>
+                                            <td>@item.PolicyNumber</td>
+                                            <td>@item.PolicyDate.ToShortDateString()</td>
+                                            <td>@item.PolicyDuration</td>
+                                            <td>
+                                                <a asp-action="AddEstimate" asp-route-id="@item.InsuranceId" class="btn btn-danger btn-sm">Add Estimate</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="6" class="text-center">No insurance records found.</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
