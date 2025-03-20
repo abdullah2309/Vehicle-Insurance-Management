@@ -13,25 +13,29 @@ The Vehicle Insurance Management System is a web application developed using .NE
 •	Submit and track insurance claims
 •	Online payment integration
 
-Admin Features:
+<h2>
+Admin Features:</h2>
 
 •	Manage users and policies
 •	Approve or reject claims
 •	Generate reports and analytics
 •	Policy renewal management
 •	
-System Modules
+<h2>
+System Modules</h2>
 User Module
 o	User Registration/Login
 o	Profile Management
 o	Policy Purchase
 o	Claim Submission
-Admin Module
+<h2>
+Admin Module</h2>
 o	User & Policy Management
 o	Claim Processing
 o	Reports & Analytics
 
-Technologies Used
+<h2>
+Technologies Used: </h2>
 
 •	Frontend: HTML, CSS, JavaScript, Bootstrap,
 •	Backend: ASP.NET Core, C#, Entity Framework
