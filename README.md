@@ -5,7 +5,7 @@ The Vehicle Insurance Management System is a web application developed using .NE
 
 <p>
   <h2>
-  User Features: </h2>
+  User Features: </h2> 
 
 •	User registration and authentication
 •	Purchase insurance policies
