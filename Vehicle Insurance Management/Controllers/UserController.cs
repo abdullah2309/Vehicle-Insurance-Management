@@ -6,9 +6,7 @@ using Vehicle_Insurance_Management.Migrations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-
-
-namespace Vehicle_Insurance_Management.Controllers
+namespace Vehicle_Insurance_Management.Controllers 
 {
     public class UserController : Controller
     {
